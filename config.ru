@@ -5,4 +5,7 @@ if ActiveRecord::Base.connection.migration_context.needs_migration?
 end
 
 run ApplicationController
+use ExercisesController
+use WorkoutsController
 use UsersController
+use SessionsController

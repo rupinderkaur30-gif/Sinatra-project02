@@ -1,0 +1,9 @@
+<h1>Your Workout</h1>
+<a href="/workouts/<%= @workout.id %>/exercises/new">Create Exercise </a>
+<% @workout.exercises.each do |exercise| %>
+    <p>
+        <a href="/exercises/<%= exercise.id %>">
+            <%= exercise.name %>
+        </a>
+    </p>
+<% end %>
