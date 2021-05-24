@@ -17,17 +17,20 @@
         background: pink;
       }
     </style>
+    
   </head>
   <body>
     <div class="wrapper">
     <nav>
     <% if logged_in? %>
-      <a href="/logout">Log Out</a> |
-      <a href="/workouts/new">Workout</a>
-      <a href="/workouts">All Workouts</a>
+      <button type="button"> <a href="/logout">Log Out</a></button> |
+      
+     <button type="button">  <a href="/workouts/new">Workout</a></button> |
+
+      <button type="button"> <a href="/workouts">All Workouts</a></button>
     <% else %>
-      <a href="/users/new">Sign Up!</a> |
-      <a href="/login">Login!</a>
+      <button type="button"> <a href="/users/new">Sign Up!</a></button> |
+      <button type="button"> <a href="/login">Login!</a> </button>
     <% end %>
   </nav>
 

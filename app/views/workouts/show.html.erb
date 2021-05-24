@@ -1,5 +1,4 @@
-<h1>Your Workout</h1>
-<a href="/workouts/<%= @workout.id %>/exercises/new">Create Exercise </a>
+<h1>Your Workout | <%= @workout.name %> </h1>
 <% @workout.exercises.each do |exercise| %>
     <p>
         <a href="/exercises/<%= exercise.id %>">
@@ -7,3 +6,9 @@
         </a>
     </p>
 <% end %>
+<button type="button"> <a href="/workouts/<%= @workout.id %>/exercises/new">Create Exercise </a></button><br>
+<button type="button"> <a href="/workouts/<%= @workout.id %>/edit"> Edit </a></button>
+<form action="/workouts/<%= @workout.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Delete">
+</form>
