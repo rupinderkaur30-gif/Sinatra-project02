@@ -45,7 +45,7 @@ class WorkoutsController < ApplicationController
   # DELETE: /workouts/5/delete
   delete "/workouts/:id" do
     redirect_if_not_logged_in
-    workout = current_users.workouts.find(params[:id])
+    workout = current_user.workouts.find(params[:id])
     if workout.user == current_user
      workout.destroy 
     end

@@ -14,32 +14,52 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
     <style>
       body {
-        background: pink;
+        background-image:url('https://png.pngtree.com/png-vector/20190903/ourlarge/pngtree-set-of-gym-workout-people-png-image_1718229.jpg');
+        background-position: center;
+        min-height: 100vh;
+        background-size: cover;
+       }
+       
+    button {
+         padding: 1em;
+         background-color: red;
+         text-align: end;
+       }  
+
+       .float-right {
+        float: right;
+        
       }
+
+
+      .center {
+        margin-top: 300px;
+      }
+      
     </style>
     
   </head>
   <body>
-    <div class="wrapper">
-    <nav>
+    <nav> 
+    <div class="float-right">
     <% if logged_in? %>
       <button type="button"> <a href="/logout">Log Out</a></button> |
+
       
      <button type="button">  <a href="/workouts/new">Workout</a></button> |
+
 
       <button type="button"> <a href="/workouts">All Workouts</a></button>
     <% else %>
       <button type="button"> <a href="/users/new">Sign Up!</a></button> |
       <button type="button"> <a href="/login">Login!</a> </button>
     <% end %>
+    </div>
   </nav>
+<div class="clearfix"></div>
 
         <%= yield %>
 
-      <footer class="branding">
-        <small>&copy; 2021 <strong>WorkoutApp</strong></small>
-      </footer>
-    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!--[if lt IE 7]>
