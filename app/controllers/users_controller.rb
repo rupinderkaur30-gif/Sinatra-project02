@@ -17,9 +17,14 @@ class UsersController < ApplicationController
   end
 
   post "/users" do
-  user = User.create(username: params[:username], password: params[:password])
-  session[:user_id] = user.id
-  redirect to "/users/#{user.id}"
+  user = User.new(username: params[:username], password: params[:password])
+  if user.save
+    session[:user_id] = user.id
+    redirect to "/users/#{user.id}"
+  else
+    flash[:warning] = user.errors.full_messages.to_sentence
+    redirect to "/users/new"
   end
+end
 
   end

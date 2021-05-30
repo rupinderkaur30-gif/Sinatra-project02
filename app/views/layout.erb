@@ -14,28 +14,46 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
     <style>
       body {
-        background-image:url('https://png.pngtree.com/png-vector/20190903/ourlarge/pngtree-set-of-gym-workout-people-png-image_1718229.jpg');
-        background-position: center;
-        min-height: 100vh;
+        background-image:url(https://png.pngtree.com/png-vector/20190903/ourlarge/pngtree-set-of-gym-workout-people-png-image_1718229.jpg);
+        
+        min-height: 500px;
         background-size: cover;
+        background-attachment: fixed;
        }
        
     button {
-         padding: 1em;
+      padding: 10px;
          background-color: red;
          text-align: end;
        }  
+       button input {
+         background-color: red;
+         border: none;
+         color: blue;
+         text-decoration: underline;
+       }
 
        .float-right {
         float: right;
         
       }
+       .clearfix {
+         clear: both;
 
+       }
 
       .center {
-        margin-top: 300px;
+        margin-top: auto;
+      }
+
+      .font-size-20 {
+        font-size: 20px;
+        color: red;
+
       }
       
+     
+     
     </style>
     
   </head>
@@ -57,6 +75,7 @@
     </div>
   </nav>
 <div class="clearfix"></div>
+<%= styled_flash %>
 
         <%= yield %>
 

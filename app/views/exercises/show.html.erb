@@ -1,10 +1,10 @@
-<h1>Name <%= @exercise.name %> </h1>
-<h1>Reps <%= @exercise.reps %> </h1>
-<h1>Sets <%= @exercise.sets %> </h1>
-<h1>Minutes <%= @exercise.minutes %> </h1>
-<a href="/workouts/<%= @exercise.workout.id %>">Go to Workout</a>
-<a href="/exercises/<%= @exercise.id %>/edit"> Edit </a>
+<h1>Name - <%= @exercise.name %> </h1><br>
+<h1>Reps - <%= @exercise.reps %> </h1><br>
+<h1>Sets - <%= @exercise.sets %> </h1><br>
+<h1>Minutes - <%= @exercise.minutes %> </h1><br>
+<button type="button" ><a href="/workouts/<%= @exercise.workout.id %>">Go to Workout</a></button><br>
+<button type="button"> <a href="/exercises/<%= @exercise.id %>/edit"> Edit </a></button><br>
 <form action="/exercises/<%= @exercise.id %>" method="post">
 <input type="hidden" name="_method" value="delete">
-<input type="submit" value="Delete">
+<button type="button"><input type="submit" value="Delete"></button>
 </form>
