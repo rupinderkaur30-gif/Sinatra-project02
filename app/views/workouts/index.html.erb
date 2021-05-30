@@ -1,5 +1,6 @@
 <h1>My Workouts</h1><br>
 <% @workouts.each do |workout| %><br>
    <button type="button"><a href="/workouts/<%= workout.id %>"><%= " #{workout.name}" %></a><br></button>
+   
     <% end %>
 
